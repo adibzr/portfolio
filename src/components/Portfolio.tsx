@@ -1,5 +1,5 @@
 import { PortfolioItem } from "./PortfolioItem";
-import { projectsEn, projectsEs } from "../assets/projects";
+import { projectsEn, projectsEs } from "../assets/projects/projects";
 import { useAppSelector } from "../hooks";
 
 type project = {
