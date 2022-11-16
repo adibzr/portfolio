@@ -1,16 +1,17 @@
 import videgameImg from "./images/videogame_project.png";
+import barbershop from "./images/barbershop.png";
 
 export const projectsEs = [
   {
     img: videgameImg,
-    name: "Video Games",
+    name: "Video Games page",
     stack: ["React", "Redux", "Node/Express", "PosgreSQL"],
     collaborators: "Solo project",
     description:
       "App de videojuegos que incluye filtrados, ordenamiento, creación  y búsqueda. Usa como fuente la API de Rawg.io.",
   },
   {
-    img: "",
+    img: barbershop,
     name: "Barbershop",
     collaborators:
       "Agustin Puggioni, Manuel Seisdedos, Gonzalo Dos Santos, Ignacio Silva, Jaime Gutièrrez",
@@ -22,20 +23,20 @@ export const projectsEs = [
 
 export const projectsEn = [
   {
-    img: "",
-    name: "Video Games",
+    img: videgameImg,
+    name: "Video Games page",
     collaborators: "",
     stack: ["React", "Redux", "Express", "PosgreSQL"],
     description:
-      "App de videojuegos que incluye filtrados, ordenamiento, creación  y búsqueda ",
+      "Videogames app: features filterings, order by, create game and search by name",
   },
   {
-    img: "",
+    img: barbershop,
     name: "Barbershop",
     stack: ["React", "Redux-toolkit", "Express", "MongoDB"],
     collaborators:
       "Agustin Puggioni, Manuel Seisdedos, Gonzalo Dos Santos, Ignacio Silva, Jaime Gutièrrez",
     description:
-      "E-commerce que incluye pedido y gestión de turnos, filtrado y búsqueda de productos,  carrito de compra con pasarela de pago, envío de mail, administración de productos, usuarios y compra,",
+      "E-commerce that features apointment creation and management, product filtering and search, product cart and payment system, mailing upon compleate/cancel/create/dispatch product, admin features: product modification, creation, deletion; user ban, convert to admin, purchase history; purchase histories, option to complete/cancel/process/dispatch product",
   },
 ];

@@ -5,6 +5,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: { inter: ["inter", "serif"] },
+      boxShadow: {
+        introButton: "inset 400px 0 0 0 rgb(34 197 94)",
+      },
     },
   },
   plugins: [],

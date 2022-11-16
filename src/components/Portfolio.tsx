@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { portfolioItem, PortfolioItem } from "./PortfolioItem";
+import { PortfolioItem } from "./PortfolioItem";
 import { projectsEn, projectsEs } from "../assets/projects";
+import { useAppSelector } from "../hooks";
 
 type project = {
   img: string;
@@ -10,10 +10,12 @@ type project = {
   description: string;
 };
 
-const Portfolio = (spanish: { spanish: boolean }) => {
+const Portfolio = () => {
+  const { spanish } = useAppSelector((state) => state.lang);
+
   const project: project[] = spanish ? projectsEs : projectsEn;
   return (
-    <div>
+    <div id="project">
       {project.map((pro) => {
         return <PortfolioItem project={pro} />;
       })}
