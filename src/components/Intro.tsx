@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from "../hooks";
 import { changeLenguaje } from "../slice";
 import { Link } from "react-scroll";
 
-//<Link to="test1" spy={true} smooth={true} offset={50} duration={500}
+//<Link to="test1" spy={true} smooth={true}  duration={500}
 const Intro = () => {
   const { spanish } = useAppSelector((state) => state.lang);
   const dispatch = useAppDispatch();
@@ -58,13 +58,13 @@ const Intro = () => {
             Soy Desarrolador web fullstack
           </h1>
           <div className="flex gap-4 text-green-400 text-3xl ml-6">
-            <Link
-              to="skills"
+          <Link
+              to="skill"
               spy={true}
               smooth={true}
-              offset={50}
+              
               duration={500}
-              className="cursor-pointer p-2 border border-green-500shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-500 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)]  hover:text-white"
+              className="cursor-pointer p-2 border border-green-500shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-500 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
             >
               Skills
             </Link>
@@ -72,7 +72,7 @@ const Intro = () => {
               to="project"
               spy={true}
               smooth={true}
-              offset={50}
+              
               duration={500}
               className="cursor-pointer p-2 border border-green-500shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-500 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
             >
@@ -82,7 +82,7 @@ const Intro = () => {
               to="acerca"
               spy={true}
               smooth={true}
-              offset={50}
+              
               duration={500}
               className="cursor-pointer p-2 border border-green-500shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-500 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
             >
@@ -92,7 +92,7 @@ const Intro = () => {
               to="contacto"
               spy={true}
               smooth={true}
-              offset={50}
+              
               duration={500}
               className="cursor-pointer p-2 border border-green-500shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-500 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
             >
@@ -108,10 +108,10 @@ const Intro = () => {
           </h1>
           <div className="flex gap-4 text-green-400 text-3xl ml-6">
             <Link
-              to="skillsEn"
+              to="skill"
               spy={true}
               smooth={true}
-              offset={50}
+              
               duration={500}
               className="cursor-pointer p-2 border border-green-500shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-500 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
             >
@@ -121,7 +121,7 @@ const Intro = () => {
               to="project"
               spy={true}
               smooth={true}
-              offset={50}
+              
               duration={500}
               className="cursor-pointer p-2 border border-green-500shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-500 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
             >
@@ -131,7 +131,7 @@ const Intro = () => {
               to="about"
               spy={true}
               smooth={true}
-              offset={50}
+              
               duration={500}
               className="cursor-pointer p-2 border border-green-500shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-500 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
             >
@@ -141,7 +141,7 @@ const Intro = () => {
               to="contact"
               spy={true}
               smooth={true}
-              offset={50}
+              
               duration={500}
               className="cursor-pointer p-2 border border-green-500shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-500 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
             >
