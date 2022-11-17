@@ -9,9 +9,9 @@ export const projectsEs = [
     collaborators: "Solo project",
     description:
       "App de videojuegos que incluye filtrados, ordenamiento, creación  y búsqueda. Usa como fuente la API de Rawg.io.",
-    repoFront:'https://github.com/adibzr/barbershop-front'  ,
-    repoBack: 'https://github.com/adibzr/barbershop-back',
-    site: 'https://videogames-adib-raed.up.railway.app/home'
+    repoFront: "https://github.com/adibzr/barbershop-front",
+    repoBack: "https://github.com/adibzr/barbershop-back",
+    site: "https://videogames-adib-raed.up.railway.app/home",
   },
   // {
   //   img: barbershop,
@@ -31,13 +31,13 @@ export const projectsEn = [
   {
     img: videgameImg,
     name: "Video Games page",
-    collaborators: "",
-    stack: ["React", "Redux", "Express", "PosgreSQL"],
+    stack: ["React", "Redux", "Node/Express", "PosgreSQL"],
+    collaborators: "Solo project",
     description:
-      "features filterings, order by, create game and search by name",
-    repoFront:'https://github.com/adibzr/barbershop-front',
-    repoBack: 'https://github.com/adibzr/barbershop-back',
-    site: 'https://videogames-adib-raed.up.railway.app/home'
+      "App de videojuegos que incluye filtrados, ordenamiento, creación  y búsqueda. Usa como fuente la API de Rawg.io.",
+    repoFront: "https://github.com/adibzr/barbershop-front",
+    repoBack: "https://github.com/adibzr/barbershop-back",
+    site: "https://videogames-adib-raed.up.railway.app/home",
   },
   // {
   //   img: barbershop,

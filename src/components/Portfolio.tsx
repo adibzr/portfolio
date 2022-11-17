@@ -15,7 +15,7 @@ const Portfolio = () => {
 
   const project: project[] = spanish ? projectsEs : projectsEn;
   return (
-    <div id="project" className='h-screen'>
+    <div id="project" className="min-h-screen">
       {project.map((pro) => {
         return <PortfolioItem project={pro} />;
       })}

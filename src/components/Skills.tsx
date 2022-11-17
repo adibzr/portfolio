@@ -1,6 +1,10 @@
 import { backSkills, frontSkills } from "../assets/skills/skills";
 
+
+
 const Skills = () => {
+
+
   return (
     <div id="skill" className="h-screen relative text-white">
       <svg
@@ -46,7 +50,7 @@ const Skills = () => {
             </h1>
             {frontSkills.map((skill) => {
               return (
-                <div className="flex gap-6 font-semibold">
+                <div key={skill.name} className="">
                   <img
                     height="40px"
                     width="40px"
@@ -64,7 +68,7 @@ const Skills = () => {
             </h1>
             {backSkills.map((skill) => {
               return (
-                <div className="flex gap-6">
+                <div key={skill.name} className="">
                   <img
                     className="bg-none"
                     height="40px"
