@@ -1,70 +1,30 @@
-import { AiFillFilePdf } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FiGithub } from "react-icons/fi";
 import { useAppDispatch, useAppSelector } from "../hooks";
-import { changeLenguaje } from "../slice";
 import { Link } from "react-scroll";
+import { useRef } from "react";
 
-//<Link to="test1" spy={true} smooth={true}  duration={500}
 const Intro = () => {
   const { spanish } = useAppSelector((state) => state.lang);
-  const dispatch = useAppDispatch();
+  const intro: any = useRef();
 
-  const handleChangeLan = () => {
-    dispatch(changeLenguaje());
-  };
   return (
     <section className="flex justify-center min-h-screen items-center font-bold text-6xl ">
-      <nav className=" flex justify-between w-full px-4 absolute top-0 p-2 ">
-        {spanish ? (
-          <button
-            className="cursor-pointer font-bold text-green-400 text-xl px-2"
-            onClick={() => {
-              handleChangeLan();
-            }}
-          >
-            Es
-          </button>
-        ) : (
-          <button
-            className="cursor-pointer font-bold text-green-400 text-xl px-2"
-            onClick={() => {
-              handleChangeLan();
-            }}
-          >
-            En
-          </button>
-        )}
-        <div className="flex px-4 gap-4">
-          <a
-            href="https://www.linkedin.com/in/adib-raed-a9376823a/"
-            target="_black"
-          >
-            <FaLinkedinIn size={25} fill="#15EE0A" />
-          </a>
-          <a href=" https://github.com/adibzr" target="_black">
-            <FiGithub size={25} color="#15EE0A" />
-          </a>
-          <a href="#" target="_black">
-            <AiFillFilePdf size={25} color="#15EE0A" />
-          </a>
-        </div>
-      </nav>
       {spanish ? (
-        <div className="lg:max-w-[1140px] md:max-w-[720px] w-full px-4 mx-auto">
+        <div
+          ref={intro}
+          className="lg:max-w-[1140px] md:max-w-[720px] w-full px-4 mx-auto"
+        >
           <h1 className="mb-10">
             Hola, mi nombre es <p className="text-green-400 inline">Adib</p>
             <br />
             Soy Desarrolador web fullstack
           </h1>
           <div className="flex gap-4 text-green-400 text-3xl ml-6">
-          <Link
+            <Link
               to="skill"
               spy={true}
               smooth={true}
-              
               duration={500}
-              className="cursor-pointer p-2 border border-green-500shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-500 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
+              className="cursor-pointer p-2 border border-green-500 shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-300 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
             >
               Skills
             </Link>
@@ -72,9 +32,8 @@ const Intro = () => {
               to="project"
               spy={true}
               smooth={true}
-              
               duration={500}
-              className="cursor-pointer p-2 border border-green-500shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-500 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
+              className="cursor-pointer p-2 border border-green-500 shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-300 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
             >
               proyectos
             </Link>
@@ -82,9 +41,8 @@ const Intro = () => {
               to="acerca"
               spy={true}
               smooth={true}
-              
               duration={500}
-              className="cursor-pointer p-2 border border-green-500shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-500 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
+              className="cursor-pointer p-2 border border-green-500 shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-300 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
             >
               Acerca de mi
             </Link>
@@ -92,16 +50,18 @@ const Intro = () => {
               to="contacto"
               spy={true}
               smooth={true}
-              
               duration={500}
-              className="cursor-pointer p-2 border border-green-500shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-500 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
+              className="cursor-pointer p-2 border border-green-500 shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-300 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
             >
               Contacto
             </Link>
           </div>
         </div>
       ) : (
-        <div>
+        <div
+          className="lg:max-w-[1140px] md:max-w-[720px] w-full px-4 mx-auto"
+          ref={intro}
+        >
           <h1 className="mb-10">
             Hi, I'm <p className="text-green-400 inline">Adib</p> <br />
             I'm a fullstack web developer
@@ -111,9 +71,8 @@ const Intro = () => {
               to="skill"
               spy={true}
               smooth={true}
-              
               duration={500}
-              className="cursor-pointer p-2 border border-green-500shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-500 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
+              className="cursor-pointer p-2 border border-green-500 shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-300 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
             >
               Skills
             </Link>
@@ -121,9 +80,8 @@ const Intro = () => {
               to="project"
               spy={true}
               smooth={true}
-              
               duration={500}
-              className="cursor-pointer p-2 border border-green-500shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-500 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
+              className="cursor-pointer p-2 border border-green-500 shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-300 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
             >
               Projects
             </Link>
@@ -131,9 +89,8 @@ const Intro = () => {
               to="about"
               spy={true}
               smooth={true}
-              
               duration={500}
-              className="cursor-pointer p-2 border border-green-500shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-500 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
+              className="cursor-pointer p-2 border border-green-500 shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-300 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
             >
               About
             </Link>
@@ -141,9 +98,8 @@ const Intro = () => {
               to="contact"
               spy={true}
               smooth={true}
-              
               duration={500}
-              className="cursor-pointer p-2 border border-green-500shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-500 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
+              className="cursor-pointer p-2 border border-green-500 shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-300 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
             >
               Contact
             </Link>
