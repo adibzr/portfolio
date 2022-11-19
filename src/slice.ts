@@ -1,7 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { info, projectsEn, projectsEs } from "./assets/projects/projects";
 
-const initialState = {
+interface init {
+  spanish: boolean;
+  projects: info[];
+}
+
+const initialState: init = {
   spanish: false,
+  projects: projectsEn,
 };
 
 //==============action=================
@@ -10,6 +17,12 @@ export const changeLenguaje = (): any => {
     dispatch(setLenguaje());
   };
 };
+export const changeProjectLan = (): any => {
+  return (dispatch: any) => {
+    dispatch(setProjects());
+  };
+};
+
 //==========reducer================
 export const lenguaje = createSlice({
   name: "lang",
@@ -18,8 +31,11 @@ export const lenguaje = createSlice({
     setLenguaje: (state) => {
       state.spanish = !state.spanish;
     },
+    setProjects: (state) => {
+      state.projects = state.spanish ? projectsEs : projectsEn;
+    },
   },
 });
 
 export default lenguaje.reducer;
-export const { setLenguaje } = lenguaje.actions;
+export const { setLenguaje, setProjects } = lenguaje.actions;

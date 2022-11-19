@@ -1,3 +1,6 @@
+import Fade from "react-reveal/Fade";
+import { useAppSelector } from "../hooks";
+
 export type portfolioItem = {
   img?: string;
   name?: string;
@@ -10,39 +13,72 @@ export type portfolioItem = {
 };
 
 export const PortfolioItem = ({ project }: { project: portfolioItem }) => {
+  const { spanish } = useAppSelector((state) => state.lang);
+
   return (
-    <div className="xl:max-w-[1200px] lg:max-w-[960px] md:max-w-[720px] max-w-[540px]">
-      <h2 className="my-[4.5rem] font-bold text-3xl">PROJECTS</h2>
-      <div className="mt-20 mx-4 flex flex-col  gap-8">
-        <h3>{project.name}</h3>
-        <div className="flex p-2 ">
-          {project.stack.map((stack: string) => {
-            return (
-              <p key={stack} className="mx-4 px-2 bg-green-400">
-                {stack}
-              </p>
-            );
-          })}
-        </div>
-        <p>{project.collaborators}</p>
-        <p>{project.description}</p>
-        <div>
-          <a href={project.site} target="_blank">
-            Site
-          </a>
-          <a href={project.repoFront} target="_blank">
-            Front code
-          </a>
-          <a href={project.repoBack} target="_blank">
-            Back code
-          </a>
-        </div>
+    <div className="">
+      <div className="flex gap-8 justify-between mb-20">
+        <Fade left>
+          <div className="flex flex-col gap-6">
+            <h3 className="font-bold text-2xl">{project.name}</h3>
+            <div className="flex flex-wrap gap-4">
+              {project.stack.map((stack: string) => {
+                return (
+                  <p key={stack} className="bg-green-400 inline-block p-2">
+                    {stack}
+                  </p>
+                );
+              })}
+            </div>
+            <p>
+              {spanish ? (
+                <p className="text-lg font-semibold">Colaboradores: </p>
+              ) : (
+                <p className="text-lg font-semibold">Collaborators: </p>
+              )}
+              {project.collaborators}
+            </p>
+            <p>
+              {spanish ? (
+                <p className="text-lg font-semibold">Acerta del proyecto: </p>
+              ) : (
+                <p className="text-lg font-semibold">About the project: </p>
+              )}
+              {project.description}
+            </p>
+            <div>
+              <a
+                className="bg-black/50 m-2 rounded-md text-white font-semibold p-2"
+                href={project.site}
+                target="_blank"
+              >
+                Site
+              </a>
+              <a
+                className="bg-black/50 m-2 rounded-md text-white font-semibold p-2"
+                href={project.repoFront}
+                target="_blank"
+              >
+                Front code
+              </a>
+              <a
+                className="bg-black/50 m-2 rounded-md text-white font-semibold p-2"
+                href={project.repoBack}
+                target="_blank"
+              >
+                Back code
+              </a>
+            </div>
+          </div>
+        </Fade>
+        <Fade right cascade>
+          <img
+            src={project.img}
+            alt={project.name}
+            className=" border-2 border-green-400 max-w-[60%]"
+          />
+        </Fade>
       </div>
-      <img
-        src={project.img}
-        alt={project.name}
-        className="felx w-full  border-2 border-green-400 mt-20 justify-self-center"
-      />
     </div>
   );
 };

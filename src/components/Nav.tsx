@@ -2,7 +2,7 @@ import { AiFillFilePdf } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { useAppDispatch, useAppSelector } from "../hooks";
-import { changeLenguaje } from "../slice";
+import { changeLenguaje, changeProjectLan } from "../slice";
 
 const Nav = () => {
   const spanish = useAppSelector((state) => state.lang.spanish);
@@ -11,11 +11,12 @@ const Nav = () => {
   const handleChangeLan = (e: any) => {
     e.preventDefault();
     dispatch(changeLenguaje());
+    dispatch(changeProjectLan());
   };
 
   return (
     <nav className=" flex justify-between w-full px-16  z-20 top-0 p-2 bg-white/80 ">
-      {spanish ? (
+      {!spanish ? (
         <button
           className="cursor-pointer z-30 font-bold text-green-400 text-xl px-2"
           onClick={(e) => {
