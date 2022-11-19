@@ -1,6 +1,6 @@
-import { PortfolioItem } from "./PortfolioItem";
 import { projectsEn, projectsEs } from "../assets/projects/projects";
 import { useAppSelector } from "../hooks";
+import { PortfolioItem } from "./PortfolioItem";
 
 type project = {
   img: string;
@@ -15,7 +15,7 @@ const Portfolio = () => {
 
   const project: project[] = spanish ? projectsEs : projectsEn;
   return (
-    <div id="project" className="min-h-screen">
+    <div id="project" className="min-h-screen mx-8">
       {project.map((pro) => {
         return <PortfolioItem project={pro} />;
       })}

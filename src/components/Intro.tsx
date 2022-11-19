@@ -106,17 +106,6 @@ const Intro = () => {
           </div>
         </div>
       )}
-
-      {/* <p className="flex items-center justify-center py-10">
-        con formación como Diseñador Web. Experiencia trabajando en NodeJS,
-        React, Redux, SQL entre otras tecnologías del sector.
-        <br />
-        Forme parte de un equipo para la creación de un pagina de barberia que
-        incluye, manejo de turnos y compra de productos.
-        <br />
-        Con pensamiento creativo, resolución de problemas, trabajo en equipo,
-        comunicación y autonomía.
-      </p> */}
     </section>
   );
 };

@@ -11,9 +11,10 @@ export type portfolioItem = {
 
 export const PortfolioItem = ({ project }: { project: portfolioItem }) => {
   return (
-    <div className="grid grid-cols-[.5fr_2fr]">
+    <div className="xl:max-w-[1200px] lg:max-w-[960px] md:max-w-[720px] max-w-[540px]">
+      <h2 className="my-[4.5rem] font-bold text-3xl">PROJECTS</h2>
       <div className="mt-20 mx-4 flex flex-col  gap-8">
-        <h2>{project.name}</h2>
+        <h3>{project.name}</h3>
         <div className="flex p-2 ">
           {project.stack.map((stack: string) => {
             return (
