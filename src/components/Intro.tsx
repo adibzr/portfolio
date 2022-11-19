@@ -36,7 +36,7 @@ const Intro = () => {
                 Proyectos
               </Link>
               <Link
-                to="acerca"
+                to="about"
                 spy={true}
                 smooth={true}
                 duration={500}
@@ -45,7 +45,7 @@ const Intro = () => {
                 Acerca de mi
               </Link>
               <Link
-                to="contacto"
+                to="contact"
                 spy={true}
                 smooth={true}
                 duration={500}

@@ -15,8 +15,8 @@ const Portfolio = () => {
       id="project"
       className="min-h-screen xl:max-w-[1200px] lg:max-w-[960px] md:max-w-[720px] max-w-[540px] mx-auto pt-6"
     >
-      <h2 className="my-[4.5rem] text-center font-bold text-3xl">
-        {!spanish ? "PROYECTOS" : "PROJECTS"}
+      <h2 className="my-[4.5rem] text-center font-bold text-4xl">
+        {spanish ? "PROYECTOS" : "PROJECTS"}
       </h2>
       {projects.map((pro) => {
         return <PortfolioItem project={pro} />;

@@ -19,7 +19,8 @@ const Skills = () => {
     <div
       id="skill"
       className="h-screen bg-green-500 relative text-white px-1 overflow-hidden
-    after:w-full after:h-1/6 after:absolute after:left-0 after:bottom-0 after:border-r-[100vw] after:border-white after:border-t-[15vh] after:border-t-green-500"
+    after:w-full after:h-1/6 after:absolute after:left-0 after:bottom-0 after:border-r-[100vw] after:border-white after:border-t-[15vh] after:border-t-green-500
+    before:w-full before:h-1/6 before:absolute before:left-0 before:top-0 before:border-r-[100vw] before:border-white before:border-t-[15vh] before:border-r-green-500"
     >
       <Bounce right>
         <div className="grid grid-cols-2 h-[inherit] items-center justify-items-center">
