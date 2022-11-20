@@ -1,22 +1,61 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Fade from "react-reveal/Fade";
 import { backSkills, frontSkills } from "../assets/skills/skills";
 
 const Skills = () => {
   const [front, setFrontVis] = useState(false);
   const [back, setBackVis] = useState(false);
+  const [frontClicked, setFrontClicked] = useState(false);
+  const [backClicked, setBackClicked] = useState(false);
+
+  const width: any = useRef();
+  useEffect(() => {}, [width.current]);
 
   const visibilityFront = () => {
-    setBackVis(false);
-    setFrontVis(true);
+    if (!backClicked && !frontClicked) {
+      setFrontVis((prev) => !prev);
+      setBackVis(false);
+    }
   };
+
   const visibilityBack = () => {
-    setFrontVis(false);
-    setBackVis(true);
+    if (!backClicked && !frontClicked) {
+      setBackVis((prev) => !prev);
+      setFrontVis(false);
+    }
+  };
+
+  const handleClickBack = () => {
+    if (!backClicked) {
+      setBackClicked(true);
+      setFrontClicked(false);
+      setBackVis(true);
+      setFrontVis(false);
+    } else {
+      setBackClicked(false);
+      if (width.current.offsetWidth < 800) {
+        setBackVis(false);
+      }
+    }
+  };
+
+  const handleClickFront = () => {
+    if (!frontClicked) {
+      setFrontClicked(true);
+      setBackClicked(false);
+      setFrontVis(true);
+      setBackVis(false);
+    } else {
+      setFrontClicked(false);
+      if (width.current.offsetWidth < 800) {
+        setFrontVis(false);
+      }
+    }
   };
 
   return (
     <div
+      ref={width}
       id="skill"
       className="h-screen bg-green-500 relative text-[#D7FADB] px-1 overflow-hidden
     after:w-full after:h-1/6 after:absolute after:left-0 after:bottom-0 lg:after:border-r-[100vw] after:border-white lg:after:border-t-[15vh] after:border-t-green-500
@@ -27,27 +66,48 @@ const Skills = () => {
           <div className="font-bold lg:text-5xl text-4xl lg:m-8 m-4">
             <p>&lt;Skills&gt;</p>
             <p
-              className="ml-20 cursor-pointer m-8 hover:text-blue-700 "
+              className={`ml-20 cursor-pointer m-8 hover:text-blue-900 ${
+                frontClicked ? "text-blue-900" : ""
+              }`}
               onMouseEnter={() => visibilityFront()}
+              onMouseLeave={() => visibilityFront()}
               onClick={() => {
-                visibilityFront();
+                handleClickFront();
               }}
             >
               &lt;Frontend/&gt;
             </p>
+
             <p
-              className="ml-20 cursor-pointer m-8 hover:text-blue-700 "
+              className={`ml-20 cursor-pointer m-8 hover:text-blue-900 ${
+                backClicked ? "text-blue-900" : ""
+              }`}
               onMouseEnter={() => visibilityBack()}
+              onMouseLeave={() => visibilityBack()}
               onClick={() => {
-                visibilityBack();
+                handleClickBack();
               }}
             >
               &lt;Backend/&gt;
             </p>
+
             <p>&lt;/Skills&gt;</p>
           </div>
           <div
-            className={`absolute lg:top-16 bottom-[10%] lg:right-[8rem] ease-in duration-300 lg:w-[inherit] w-full ${
+            className={`absolute top-[40%] lg:right-[8rem] ease-in-out duration-200 lg:w-[inherit] w-full ${
+              front || back ? "opacity-0" : "opacity-100"
+            }`}
+          >
+            <div>
+              <p className="text-4xl">" Talk is cheap. Show me the code "</p>
+              <p className="text-xl pl-12 pt-2">-Linus Torvalds</p>
+              <p className="pt-20 text-blue-900">
+                &lt; click or hover on a tag to show stack
+              </p>
+            </div>
+          </div>
+          <div
+            className={`absolute lg:top-16 top-[40%] lg:right-[8rem] ease-in duration-300 lg:w-[inherit] w-full ${
               front
                 ? "opacity-100 -translate-x- 0 "
                 : "translate-x-full opacity-0"
@@ -73,7 +133,7 @@ const Skills = () => {
             </div>
           </div>
           <div
-            className={`absolute lg:top-16 bottom-[12%] lg:right-[8rem] ease-in duration-300 lg:w-[inherit] w-full ${
+            className={`absolute lg:top-16 top-[40%] lg:right-[8rem] ease-in duration-300 lg:w-[inherit] w-full ${
               back
                 ? "opacity-100 -translate-x-0"
                 : " translate-x-full opacity-0"
