@@ -1,4 +1,3 @@
-import Fade from "react-reveal/Fade";
 import { useAppSelector } from "../hooks";
 
 const Contact = () => {
@@ -16,32 +15,30 @@ const Contact = () => {
             {spanish ? "CONTACTO" : "CONTACT"}
           </h2>
 
-          <Fade bottom>
-            <input
-              type="text"
-              name="name"
-              placeholder={spanish ? "Nombre" : "Name"}
-              className="p-2 bg-transparent border-2 rounded-md focus:outline-none"
-            />
-            <input
-              type="text"
-              name="email"
-              placeholder={"Email"}
-              className="my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none"
-            />
-            <textarea
-              name="message"
-              placeholder={spanish ? "Mensaje" : "Message"}
-              rows={10}
-              className="p-2 mb-4 bg-transparent border-2 rounded-md focus:outline-none"
-            />
-            <button
-              type="submit"
-              className="cursor-pointer font-semibold text-green-500 w-[10rem] p-2 border border-green-500 shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-300 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
-            >
-              {spanish ? "Cantactame" : "Get in touch"}
-            </button>
-          </Fade>
+          <input
+            type="text"
+            name="name"
+            placeholder={spanish ? "Nombre" : "Name"}
+            className="p-2 bg-transparent border-2 rounded-md focus:outline-none"
+          />
+          <input
+            type="text"
+            name="email"
+            placeholder={"Email"}
+            className="my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none"
+          />
+          <textarea
+            name="message"
+            placeholder={spanish ? "Mensaje" : "Message"}
+            rows={10}
+            className="p-2 mb-4 bg-transparent border-2 rounded-md focus:outline-none"
+          />
+          <button
+            type="submit"
+            className="cursor-pointer font-semibold text-green-500 w-[10rem] p-2 border border-green-500 shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-300 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
+          >
+            {spanish ? "Cantactame" : "Get in touch"}
+          </button>
         </form>
       </div>
     </div>
