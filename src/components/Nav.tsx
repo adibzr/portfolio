@@ -15,7 +15,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className=" flex justify-between w-full px-16  z-20 top-0 p-2 bg-white/80 ">
+    <nav className=" flex justify-between w-full lg:px-16 md:px-10 px-2 z-20 top-0 p-2 bg-white/80 ">
       {!spanish ? (
         <button
           className="cursor-pointer z-30 font-bold text-green-400 text-xl px-2"

@@ -13,7 +13,7 @@ const Portfolio = () => {
   return (
     <div
       id="project"
-      className="min-h-screen xl:max-w-[1200px] lg:max-w-[960px] md:max-w-[720px] max-w-[540px] mx-auto pt-6"
+      className="min-h-screen xl:max-w-[1200px] lg:max-w-[960px] md:max-w-[720px] max-w-[540px] md:mx-auto pt-6 mx-6"
     >
       <h2 className="my-[4.5rem] text-center font-bold text-4xl">
         {spanish ? "PROYECTOS" : "PROJECTS"}
