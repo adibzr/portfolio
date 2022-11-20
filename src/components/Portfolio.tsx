@@ -19,7 +19,7 @@ const Portfolio = () => {
         {spanish ? "PROYECTOS" : "PROJECTS"}
       </h2>
       {projects.map((pro) => {
-        return <PortfolioItem project={pro} />;
+        return <PortfolioItem key={pro.name} project={pro} />;
       })}
     </div>
   );

@@ -1,4 +1,9 @@
-function Contact() {
+import Fade from "react-reveal/Fade";
+import { useAppSelector } from "../hooks";
+
+const Contact = () => {
+  const spanish = useAppSelector((state) => state.lang.spanish);
+
   return (
     <div id="contact" className="flex flex-col mb-10 mx-auto h-screen p-16">
       <div className="flex justify-center items-center">
@@ -8,36 +13,39 @@ function Contact() {
           className="flex flex-col w-full md:w-7/12"
         >
           <h2 className="flex text-3xl font-bold pb-16 justify-center">
-            CONTACT
+            {spanish ? "CONTACTO" : "CONTACT"}
           </h2>
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            className="p-2 bg-transparent border-2 rounded-md focus:outline-none"
-          />
-          <input
-            type="text"
-            name="email"
-            placeholder="Email"
-            className="my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none"
-          />
-          <textarea
-            name="message"
-            placeholder="Message"
-            rows={10}
-            className="p-2 mb-4 bg-transparent border-2 rounded-md focus:outline-none"
-          />
-          <button
-            type="button"
-            className="text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-yellow-500 to-pink-500 drop-shadow-md hover:stroke-white"
-          >
-            Get in touch
-          </button>
+
+          <Fade bottom>
+            <input
+              type="text"
+              name="name"
+              placeholder={spanish ? "Nombre" : "Name"}
+              className="p-2 bg-transparent border-2 rounded-md focus:outline-none"
+            />
+            <input
+              type="text"
+              name="email"
+              placeholder={"Email"}
+              className="my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none"
+            />
+            <textarea
+              name="message"
+              placeholder={spanish ? "Mensaje" : "Message"}
+              rows={10}
+              className="p-2 mb-4 bg-transparent border-2 rounded-md focus:outline-none"
+            />
+            <button
+              type="submit"
+              className="cursor-pointer font-semibold text-green-500 w-[10rem] p-2 border border-green-500 shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-300 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
+            >
+              {spanish ? "Cantactame" : "Get in touch"}
+            </button>
+          </Fade>
         </form>
       </div>
     </div>
   );
-}
+};
 
 export default Contact;

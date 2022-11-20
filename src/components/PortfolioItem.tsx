@@ -24,28 +24,31 @@ export const PortfolioItem = ({ project }: { project: portfolioItem }) => {
             <div className="flex flex-wrap gap-4">
               {project.stack.map((stack: string) => {
                 return (
-                  <p key={stack} className="bg-green-400 inline-block p-2 ">
+                  <p
+                    key={project.name + stack}
+                    className="bg-green-400 inline-block p-2 "
+                  >
                     {stack}
                   </p>
                 );
               })}
             </div>
-            <p>
+            <div>
               {spanish ? (
                 <p className="text-lg font-semibold">Colaboradores: </p>
               ) : (
                 <p className="text-lg font-semibold">Collaborators: </p>
               )}
               {project.collaborators}
-            </p>
-            <p>
+            </div>
+            <div>
               {spanish ? (
                 <p className="text-lg font-semibold">Acerta del proyecto: </p>
               ) : (
                 <p className="text-lg font-semibold">About the project: </p>
               )}
               {project.description}
-            </p>
+            </div>
             <div className="text-[#D7FADB]">
               <a
                 className="bg-black/50 m-2 rounded-md font-semibold p-2"

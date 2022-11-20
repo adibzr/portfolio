@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Bounce from "react-reveal/Bounce";
+import Fade from "react-reveal/Fade";
 import { backSkills, frontSkills } from "../assets/skills/skills";
 
 const Skills = () => {
@@ -19,12 +19,12 @@ const Skills = () => {
     <div
       id="skill"
       className="h-screen bg-green-500 relative text-[#D7FADB] px-1 overflow-hidden
-    after:w-full after:h-1/6 after:absolute after:left-0 after:bottom-0 md:after:border-r-[100vw] after:border-white md:after:border-t-[15vh] after:border-t-green-500
-    before:w-full before:h-1/6 before:absolute before:left-0 before:top-0 md:before:border-r-[100vw] before:border-white md:before:border-t-[15vh] before:border-r-green-500"
+    after:w-full after:h-1/6 after:absolute after:left-0 after:bottom-0 lg:after:border-r-[100vw] after:border-white lg:after:border-t-[15vh] after:border-t-green-500
+    before:w-full before:h-1/6 before:absolute before:left-0 before:top-0 lg:before:border-r-[100vw] before:border-white lg:before:border-t-[15vh] before:border-r-green-500"
     >
-      <Bounce right>
-        <div className="md:grid grid-cols-2 h-[inherit] items-center md:mt-0 mt-16 justify-items-center">
-          <p className="font-bold md:text-5xl text-4xl md:m-8 m-4">
+      <Fade right>
+        <div className="lg:grid grid-cols-2 h-[inherit] items-center lg:mt-0 mt-16 justify-items-center">
+          <div className="font-bold lg:text-5xl text-4xl lg:m-8 m-4">
             <p>&lt;Skills&gt;</p>
             <p
               className="ml-20 cursor-pointer m-8 hover:text-blue-700 "
@@ -45,15 +45,15 @@ const Skills = () => {
               &lt;Backend/&gt;
             </p>
             <p>&lt;/Skills&gt;</p>
-          </p>
+          </div>
           <div
-            className={`absolute md:top-16 bottom-[10%] md:right-[8rem] ease-in duration-300 md:w-[inherit] w-full ${
+            className={`absolute lg:top-16 bottom-[10%] lg:right-[8rem] ease-in duration-300 lg:w-[inherit] w-full ${
               front
                 ? "opacity-100 -translate-x- 0 "
                 : "translate-x-full opacity-0"
             }`}
           >
-            <h1 className="md:pl-28 pl-16 md:my-10 md:pt-10 font-bold text-3xl">
+            <h1 className="lg:pl-28 pl-16 lg:my-10 lg:pt-10 font-bold text-3xl">
               Front End
             </h1>
             <div className="grid grid-cols-3 gap-8 p-16">
@@ -73,13 +73,13 @@ const Skills = () => {
             </div>
           </div>
           <div
-            className={`absolute md:top-16 bottom-[12%] md:right-[8rem] ease-in duration-300 md:w-[inherit] w-full ${
+            className={`absolute lg:top-16 bottom-[12%] lg:right-[8rem] ease-in duration-300 lg:w-[inherit] w-full ${
               back
                 ? "opacity-100 -translate-x-0"
                 : " translate-x-full opacity-0"
             }`}
           >
-            <h1 className="md:pl-28 pl-16 md:my-10 md:pt-10 font-bold text-3xl">
+            <h1 className="lg:pl-28 pl-16 lg:my-10 lg:pt-10 font-bold text-3xl">
               Back End
             </h1>
             <div className="grid grid-cols-3 gap-8 p-16">
@@ -100,7 +100,7 @@ const Skills = () => {
             </div>
           </div>
         </div>
-      </Bounce>
+      </Fade>
     </div>
   );
 };

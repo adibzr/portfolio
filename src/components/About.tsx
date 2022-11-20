@@ -37,7 +37,7 @@ const About = () => {
                   similique necessitatibus placeat quasi, aspernatur accusantium
                   fugit ipsum velit ex dolore impedit rerum soluta!
                 </p>
-                <a className="md:m-8 m-4 md:block md:text-[inherit] text-green-500 bg-white md:bg-none flex justify-center font-bold px-12 cursor-pointer p-2 border-2 border-white-500 shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-300 hover:shadow-[inset_400px_0_0_0_rgb(255,255,255)] hover:text-green-500 ">
+                <a className="md:m-8 m-4 md:inline-block md:text-[inherit] text-green-500 bg-white md:bg-transparent flex justify-center font-bold px-12 cursor-pointer p-2 border-2 border-white-500 shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-300 hover:shadow-[inset_400px_0_0_0_rgb(255,255,255)] hover:text-green-500 ">
                   CV
                 </a>
               </div>
