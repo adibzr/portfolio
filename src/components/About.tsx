@@ -92,7 +92,7 @@ const About = () => {
                   purchase system, appointments and admin management.
                   <br />I finally found my vocation in programming. I’m very
                   excited to begin this new chapter in my life where i can,
-                  finally, do can dedicate myself to doing what i love.
+                  finally, dedicate myself to doing what i love.
                 </p>
                 <a
                   href={
