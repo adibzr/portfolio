@@ -44,7 +44,8 @@ export const projectsEn = [
     name: "Video Games page",
     stack: ["React", "Redux", "Node/Express", "PosgreSQL"],
     collaborators: "Solo project",
-    description: "descripcion en ingles",
+    description:
+      "Videogames App that shows videogames from Rawg.io API. Able to filter, order, create and seach games.",
     repoFront: "https://github.com/adibzr/barbershop-front",
     repoBack: "https://github.com/adibzr/barbershop-back",
     site: "https://videogames-adib-raed.up.railway.app/home",
