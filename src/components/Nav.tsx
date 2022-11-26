@@ -45,9 +45,21 @@ const Nav = () => {
         <a href=" https://github.com/adibzr" target="_black">
           <FiGithub size={25} color="#4ade80" />
         </a>
-        <a href="#" target="_black">
-          <AiFillFilePdf size={25} color="#4ade80" />
-        </a>
+        {spanish ? (
+          <a
+            href="https://drive.google.com/file/d/1BCLjYp35W99GsgXPRbGKiYH8pjvp_LRV/view?usp=sharing"
+            target="_black"
+          >
+            <AiFillFilePdf size={25} color="#4ade80" />
+          </a>
+        ) : (
+          <a
+            href="https://drive.google.com/file/d/1_PKkoMb6wq19kP7GQ6idPjZXr90tjh7k/view?usp=sharing"
+            target="_black"
+          >
+            <AiFillFilePdf size={25} color="#4ade80" />
+          </a>
+        )}
       </div>
     </nav>
   );
