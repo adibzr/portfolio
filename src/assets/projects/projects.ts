@@ -22,7 +22,7 @@ export const projectsEs: info[] = [
       "App de videojuegos que incluye filtrados, ordenamiento, creación  y búsqueda. Usa como fuente la API de Rawg.io.",
     repoFront: "https://github.com/adibzr/videogames-front",
     repoBack: "https://github.com/adibzr/videogames-back",
-    site: "https://videogames-adib-raed.up.railway.app/home",
+    site: "https://videogame-static-site.onrender.com",
   },
   {
     img: barbershop,
