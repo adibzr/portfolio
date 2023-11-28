@@ -1,5 +1,4 @@
 import { useAppSelector } from "../hooks";
-import { Fade } from "react-reveal";
 
 export type portfolioItem = {
   img?: string;
@@ -18,7 +17,6 @@ export const PortfolioItem = ({ project }: { project: portfolioItem }) => {
   return (
     <div className="">
       <div className="flex md:flex-row flex-col gap-8 justify-between mb-10">
-        <Fade left>
           <div className="flex flex-col gap-6">
             <h3 className="font-bold text-2xl">{project.name}</h3>
             <div className="flex flex-wrap gap-4">
@@ -73,14 +71,11 @@ export const PortfolioItem = ({ project }: { project: portfolioItem }) => {
               </a>
             </div>
           </div>
-        </Fade>
-        <Fade right>
           <img
             src={project.img}
             alt={project.name}
             className=" border-2 border-green-400 md:max-w-[60%] max-w-full"
           />
-        </Fade>
       </div>
       <hr className=" w-3/4 mx-auto border border-black/20 my-8" />
     </div>

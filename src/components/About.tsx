@@ -1,5 +1,3 @@
-import Fade from "react-reveal/Fade";
-import profile from "../assets/perfil linkedIn.jpg";
 import { useAppSelector } from "../hooks";
 
 const About = () => {
@@ -19,14 +17,6 @@ const About = () => {
             ACERCA DE MI
           </h2>
           <div className=" md:grid md:m-2 m-4 text-sm grid-cols-[.5fr_1fr] h-full justify-items-center ">
-            <Fade left>
-              <img
-                src={profile}
-                alt="my profile"
-                className="md:h-[280px] h-[180px] mx-auto rounded-xl"
-              />
-            </Fade>
-            <Fade right>
               <div>
                 <p className="my-6">
                   Comencé mis estudios de ingeniería de software en la
@@ -52,7 +42,6 @@ const About = () => {
                   CV
                 </a>
               </div>
-            </Fade>
           </div>
         </div>
       ) : (
@@ -67,14 +56,6 @@ const About = () => {
             ABOUT
           </h2>
           <div className=" md:grid md:m-2 m-4 text-sm grid-cols-[.5fr_1fr] h-full justify-items-center ">
-            <Fade left>
-              <img
-                src={profile}
-                alt="my profile"
-                className="md:h-[280px] h-[180px] mx-auto rounded-xl"
-              />
-            </Fade>
-            <Fade right>
               <div>
                 <p className="my-6">
                   I began studies in software engineering in Universidad de
@@ -104,7 +85,6 @@ const About = () => {
                   CV
                 </a>
               </div>
-            </Fade>
           </div>
         </div>
       )}

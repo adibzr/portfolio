@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import Fade from "react-reveal/Fade";
 import { backSkills, frontSkills } from "../assets/skills/skills";
 
 const Skills = () => {
@@ -61,7 +60,6 @@ const Skills = () => {
     after:w-full after:h-1/6 after:absolute after:left-0 after:bottom-0 lg:after:border-r-[100vw] after:border-white lg:after:border-t-[15vh] after:border-t-green-500
     before:w-full before:h-1/6 before:absolute before:left-0 before:top-0 lg:before:border-r-[100vw] before:border-white lg:before:border-t-[15vh] before:border-r-green-500"
     >
-      <Fade right>
         <div className="lg:grid grid-cols-2 h-[inherit] items-center lg:mt-0 mt-16 justify-items-center">
           <div className="font-bold lg:text-5xl text-4xl lg:m-8 m-4">
             <p>&lt;Skills&gt;</p>
@@ -168,7 +166,6 @@ const Skills = () => {
             </div>
           </div>
         </div>
-      </Fade>
     </div>
   );
 };

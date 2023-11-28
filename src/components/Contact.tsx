@@ -1,12 +1,10 @@
 import { useAppSelector } from "../hooks";
-import { Fade } from "react-reveal";
 
 const Contact = () => {
   const spanish = useAppSelector((state) => state.lang.spanish);
 
   return (
     <div id="contact" className="flex flex-col mb-10 mx-auto h-screen p-16">
-      <Fade bottom>
         <div className="flex justify-center items-center">
           <form
             action="https://getform.io/f/7bea5f94-677b-4196-b9d2-2cd5eec45df4"
@@ -43,7 +41,6 @@ const Contact = () => {
             </button>
           </form>
         </div>
-      </Fade>
     </div>
   );
 };

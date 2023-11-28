@@ -1,13 +1,11 @@
 import { Link } from "react-scroll";
 import { useAppSelector } from "../hooks";
-import { Fade } from "react-reveal";
 
 const Intro = () => {
   const { spanish } = useAppSelector((state) => state.lang);
 
   return (
     <section className="flex justify-center min-h-screen h-screen items-center font-bold text-6xl ">
-      <Fade left>
         {spanish ? (
           <div className="lg:max-w-[1140px] md:max-w-[720px] w-full px-4 mx-auto ">
             <h1 className="mb-10">
@@ -101,7 +99,6 @@ const Intro = () => {
             </div>
           </div>
         )}
-      </Fade>
     </section>
   );
 };
