@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { backSkills, frontSkills } from "../assets/skills/skills";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const [front, setFrontVis] = useState(false);
@@ -59,7 +60,15 @@ const Skills = () => {
        "
     >
         <div className="lg:grid grid-cols-2 h-[inherit] items-center lg:mt-0 mt-16 justify-items-center">
-          <div className="font-bold lg:text-5xl text-4xl lg:m-8 m-4">
+          <motion.div 
+          variants={{
+            hidden: {opacity:0, x:-200},
+            fadeIn: {opacity:1, x:0}
+          }}
+          initial="hidden"
+          whileInView="fadeIn"
+          transition={{duration:0.5}}
+          className="font-bold lg:text-5xl text-4xl lg:m-8 m-4">
             <p>&lt;Skills&gt;</p>
             <p
               className={`ml-20 cursor-pointer m-8 hover:text-[#225f37] ${
@@ -88,13 +97,19 @@ const Skills = () => {
             </p>
 
             <p>&lt;/Skills&gt;</p>
-          </div>
+          </motion.div>
           <div
             className={`w-full ${
               front || back ? "opacity-0" : "opacity-100"
             }`}
           >
-            <div>
+            <motion.div variants={{
+              hidden: {opacity:0, x:200},
+              fadeIn: {opacity:1, x:0}
+            }}
+            initial="hidden"
+            whileInView="fadeIn"
+            transition={{duration:0.5}}>
               
               <p className="text-4xl p-2">
                 " Talk is cheap. Show me the code "
@@ -103,7 +118,7 @@ const Skills = () => {
               <p className="p-20 text-[#225f37]">
                 &lt; click tag to show stack
               </p>
-            </div>
+            </motion.div>
           </div>
           <div
           
