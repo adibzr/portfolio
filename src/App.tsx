@@ -8,7 +8,7 @@ import Skills from "./components/Skills";
 
 function App() {
   return (
-    <div>
+    <div className="max-w-7xl m-auto overflow-hidden">
       <Nav />
       <Intro />
       <Skills />

@@ -54,18 +54,16 @@ const Skills = () => {
 
   return (
     <div
-      ref={width}
       id="skill"
-      className="h-screen bg-green-500 relative text-[#D7FADB] px-1 overflow-hidden
-    after:w-full after:h-1/6 after:absolute after:left-0 after:bottom-0 lg:after:border-r-[100vw] after:border-white lg:after:border-t-[15vh] after:border-t-green-500
-    before:w-full before:h-1/6 before:absolute before:left-0 before:top-0 lg:before:border-r-[100vw] before:border-white lg:before:border-t-[15vh] before:border-r-green-500"
+      className="h-screen bg-green-400 relative text-[#D7FADB] px-1 overflow-hidden lg:bg-background bg-cover bg-center 
+       "
     >
         <div className="lg:grid grid-cols-2 h-[inherit] items-center lg:mt-0 mt-16 justify-items-center">
           <div className="font-bold lg:text-5xl text-4xl lg:m-8 m-4">
             <p>&lt;Skills&gt;</p>
             <p
-              className={`ml-20 cursor-pointer m-8 hover:text-blue-900 ${
-                frontClicked ? "text-blue-900" : ""
+              className={`ml-20 cursor-pointer m-8 hover:text-[#225f37] ${
+                frontClicked ? "text-[#225f37]" : ""
               }`}
               onMouseEnter={() => visibilityFront()}
               onMouseLeave={() => visibilityFront()}
@@ -77,8 +75,8 @@ const Skills = () => {
             </p>
 
             <p
-              className={`ml-20 cursor-pointer m-8 hover:text-blue-900 ${
-                backClicked ? "text-blue-900" : ""
+              className={`ml-20 cursor-pointer m-8 hover:text-[#225f37] ${
+                backClicked ? "text-[#225f37]" : ""
               }`}
               onMouseEnter={() => visibilityBack()}
               onMouseLeave={() => visibilityBack()}
@@ -97,15 +95,9 @@ const Skills = () => {
             }`}
           >
             <div>
-              {width.current?.offsetWidth < 800 ? (
-                <p className="p-16 text-blue-900">
-                  press on a tag to show stack
-                </p>
-              ) : (
-                <p className="pt-16 p-20 text-blue-900">
-                  &lt; click or hover on a tag to show stack
-                </p>
-              )}
+              <p className="pt-16 p-20 text-[#225f37]">
+                &lt; click tag to show stack
+              </p>
               <p className="text-4xl p-2">
                 " Talk is cheap. Show me the code "
               </p>

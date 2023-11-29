@@ -1,13 +1,23 @@
 import { Link } from "react-scroll";
 import { useAppSelector } from "../hooks";
+import {motion} from "framer-motion"
 
 const Intro = () => {
   const { spanish } = useAppSelector((state) => state.lang);
 
+
   return (
     <section className="flex justify-center min-h-screen h-screen items-center font-bold text-6xl ">
         {spanish ? (
-          <div className="lg:max-w-[1140px] md:max-w-[720px] w-full px-4 mx-auto ">
+          <motion.div 
+            variants={{
+              hidden: {opacity:0, x:200},
+              fadeIn: {opacity:1, x:0}
+            }}
+            initial="hidden"
+            whileInView="fadeIn"
+            transition={{duration:0.5}}
+            className="lg:max-w-[1140px] md:max-w-[720px] w-full px-4 mx-auto ">
             <h1 className="mb-10">
               Hola, mi nombre es <p className="text-green-400 inline">Adib</p>
               <br />
@@ -20,7 +30,7 @@ const Intro = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer p-2 border border-green-500 shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-300 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
+                className="cursor-pointer p-2 border border-green-400 shadow-[inset_0_0_0_0_rgb(34,197,94)] ease-in duration-300 hover:shadow-[inset_400px_0_0_0_rgb(34,197,94)] hover:text-white "
               >
                 Skills
               </Link>
@@ -52,9 +62,17 @@ const Intro = () => {
                 Contacto
               </Link>
             </div>
-          </div>
+          </motion.div>
         ) : (
-          <div className="lg:max-w-[1140px] md:max-w-[720px] w-full px-4 mx-auto">
+          <motion.div 
+            variants={{
+              hidden: {opacity:0, x:200},
+              fadeIn: {opacity:1, x:0}
+            }}
+            initial="hidden"
+            whileInView="fadeIn"
+            transition={{duration:0.5}}
+            className="lg:max-w-[1140px] md:max-w-[720px] w-full px-4 mx-auto">
             <h1 className="mb-10">
               Hi, I'm <p className="text-green-400 inline">Adib</p> <br />
               I'm a fullstack web developer
@@ -97,7 +115,7 @@ const Intro = () => {
                 Contact
               </Link>
             </div>
-          </div>
+          </motion.div>
         )}
     </section>
   );

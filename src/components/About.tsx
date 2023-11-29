@@ -47,9 +47,8 @@ const About = () => {
       ) : (
         <div
           id="about"
-          className="h-screen bg-green-500 relative  px-1 overflow-hidden text-[#D7FADB]
-    after:w-full after:h-1/6 after:absolute after:left-0 after:bottom-0 md:after:border-r-[100vw] after:border-white md:after:border-t-[15vh] after:border-t-green-500
-    before:w-full before:h-1/6 before:absolute before:left-0 before:top-0 md:before:border-r-[100vw] before:border-white md:before:border-t-[15vh] before:border-r-green-500
+          className="h-screen bg-green-500 relative  px-1 overflow-hidden text-[#6c6c6c]
+          lg:bg-background bg-cover bg-center
     "
         >
           <h2 className="justify-start flex flex-col items-center  pb-8 pt-[8%] font-bold text-4xl ">
