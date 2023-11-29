@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useAppSelector } from "../hooks";
 
 export type portfolioItem = {
@@ -15,9 +16,17 @@ export const PortfolioItem = ({ project }: { project: portfolioItem }) => {
   const { spanish } = useAppSelector((state) => state.lang);
 
   return (
-    <div className="">
+    <div>
       <div className="flex md:flex-row flex-col gap-8 justify-between mb-10">
-          <div className="flex flex-col gap-6">
+          <motion.div
+            variants={{
+              hidden: {opacity:0, x:-200},
+              fadeIn: {opacity:1, x:0}
+            }}
+            initial="hidden"
+            whileInView="fadeIn"
+            transition={{duration:0.5}}
+            className="flex flex-col gap-6">
             <h3 className="font-bold text-2xl">{project.name}</h3>
             <div className="flex flex-wrap gap-4">
               {project.stack.map((stack: string) => {
@@ -70,8 +79,15 @@ export const PortfolioItem = ({ project }: { project: portfolioItem }) => {
                 Back code
               </a>
             </div>
-          </div>
-          <img
+          </motion.div>
+          <motion.img
+            variants={{
+              hidden: {opacity:0, x:200},
+              fadeIn: {opacity:1, x:0}
+            }}
+            initial="hidden"
+            whileInView="fadeIn"
+            transition={{duration:0.5}}
             src={project.img}
             alt={project.name}
             className=" border-2 border-green-400 md:max-w-[60%] max-w-full"
