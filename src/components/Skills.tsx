@@ -90,22 +90,24 @@ const Skills = () => {
             <p>&lt;/Skills&gt;</p>
           </div>
           <div
-            className={`absolute md:top-[20%] bottom-[30%] lg:right-[8rem] ease-in-out duration-200 lg:w-[inherit] w-full ${
+            className={`w-full ${
               front || back ? "opacity-0" : "opacity-100"
             }`}
           >
             <div>
-              <p className="pt-16 p-20 text-[#225f37]">
-                &lt; click tag to show stack
-              </p>
+              
               <p className="text-4xl p-2">
                 " Talk is cheap. Show me the code "
               </p>
               <p className="text-xl pl-12 pt-2">-Linus Torvalds</p>
+              <p className="p-20 text-[#225f37]">
+                &lt; click tag to show stack
+              </p>
             </div>
           </div>
           <div
-            className={`absolute lg:top-16 top-[40%] lg:right-[8rem] ease-in duration-300 lg:w-[inherit] w-full ${
+          
+            className={`absolute lg:top-[30%] top-[40%] lg:right-[8rem] ease-in duration-300 lg:w-[inherit] w-full ${
               front
                 ? "opacity-100 -translate-x- 0 "
                 : "translate-x-full opacity-0"
@@ -131,7 +133,7 @@ const Skills = () => {
             </div>
           </div>
           <div
-            className={`absolute lg:top-16 top-[40%] lg:right-[8rem] ease-in duration-300 lg:w-[inherit] w-full ${
+            className={`absolute lg:top-[30%] top-[40%] lg:right-[8rem] ease-in duration-300 lg:w-[inherit] w-full ${
               back
                 ? "opacity-100 -translate-x-0"
                 : " translate-x-full opacity-0"
