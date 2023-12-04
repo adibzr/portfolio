@@ -37,25 +37,27 @@ const Nav = () => {
       )}
       <div className="flex px-4 gap-4">
         <a
-          href="https://www.linkedin.com/in/adib-raed-a9376823a/"
-          target="_black"
+          rel="noopener noreferrer" href="https://www.linkedin.com/in/adib-raed-a9376823a/"
+          target="black"
         >
           <FaLinkedinIn size={25} fill="#4ade80" />
         </a>
-        <a href=" https://github.com/adibzr" target="_black">
+        <a rel="noopener noreferrer" href=" https://github.com/adibzr" target="_black">
           <FiGithub size={25} color="#4ade80" />
         </a>
         {spanish ? (
           <a
-            href="https://drive.google.com/file/d/1BCLjYp35W99GsgXPRbGKiYH8pjvp_LRV/view?usp=sharing"
-            target="_black"
+            rel="noopener noreferrer"
+            href="https://drive.google.com/file/d/1Y2M7Fmf7WV6xB3VWJIR7LVYr300nRcWs/view?usp=drive_link"
+            target="black"
           >
             <AiFillFilePdf size={25} color="#4ade80" />
           </a>
         ) : (
           <a
-            href="https://drive.google.com/file/d/1_PKkoMb6wq19kP7GQ6idPjZXr90tjh7k/view?usp=sharing"
-            target="_black"
+            rel="noopener noreferrer"
+            href="https://drive.google.com/file/d/1_4Np6Jg2tBebOXzpfiAOOOfLJ4GP6eIb/view?usp=drive_link"
+            target="black"
           >
             <AiFillFilePdf size={25} color="#4ade80" />
           </a>
