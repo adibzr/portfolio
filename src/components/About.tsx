@@ -5,16 +5,16 @@ const About = () => {
   const spanish = useAppSelector((state) => state.lang.spanish);
 
   return (
-    <div>
-      {spanish ? (
-        <motion.div
-        variants={{
-          hidden: {opacity:0, y:-200},
-          fadeIn: {opacity:1, y:0}
+    <motion.div variants={{
+          hidden: {opacity:0, x:200},
+          fadeIn: {opacity:1, x:0}
         }}
         initial="hidden"
         whileInView="fadeIn"
-        transition={{duration:0.5}}
+        transition={{duration:0.5}}>
+      {spanish ? (
+        <div
+        
           id="about"
           className="h-screen bg-green-500 relative  px-1 overflow-hidden text-[#6c6c6c]
           lg:bg-background bg-cover bg-center"
@@ -49,16 +49,9 @@ const About = () => {
                 </a>
               </div>
           </div>
-        </motion.div>
+        </div>
       ) : (
-        <motion.div
-        variants={{
-          hidden: {opacity:0, y:-200},
-          fadeIn: {opacity:1, y:0}
-        }}
-        initial="hidden"
-        whileInView="fadeIn"
-        transition={{duration:0.5}}
+        <div
           id="about"
           className="h-screen bg-green-500 relative  px-1 overflow-hidden text-[#6c6c6c]
           lg:bg-background bg-cover bg-center
@@ -98,9 +91,9 @@ const About = () => {
                 </a>
               </div>
           </div>
-        </motion.div>
+        </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

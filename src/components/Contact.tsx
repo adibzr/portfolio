@@ -1,10 +1,19 @@
+import { motion } from "framer-motion";
 import { useAppSelector } from "../hooks";
 
 const Contact = () => {
   const spanish = useAppSelector((state) => state.lang.spanish);
 
   return (
-    <div id="contact" className="flex flex-col mb-10 mx-auto h-screen p-16">
+    <motion.div 
+      variants={{
+        hidden: {opacity:0, y:200},
+        fadeIn: {opacity:1, y:0}
+      }}
+      initial="hidden"
+      whileInView="fadeIn"
+      transition={{duration:0.5}}
+      id="contact" className="flex flex-col mb-10 mx-auto h-screen p-16">
         <div className="flex justify-center items-center">
           <form
             action="https://getform.io/f/7bea5f94-677b-4196-b9d2-2cd5eec45df4"
@@ -41,7 +50,7 @@ const Contact = () => {
             </button>
           </form>
         </div>
-    </div>
+    </motion.div>
   );
 };
 
