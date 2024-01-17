@@ -19,7 +19,7 @@ export const projectsEs: info[] = [
     stack: ["React", "Redux", "Node/Express", "PosgreSQL"],
     collaborators: "Solo project",
     description:
-      "App de videojuegos que incluye filtrados, ordenamiento, creación  y búsqueda. Usa como fuente la API de Rawg.io.",
+      "App de videojuegos que incluye filtrados, ordenamiento, creación  y búsqueda. Usa como fuente la API de Rawg.io. Backend en render es lento, permita unos minutos a que cargue",
     repoFront: "https://github.com/adibzr/videogames-front",
     repoBack: "https://github.com/adibzr/videogames-back",
     site: "https://videogame-static-site.onrender.com",
@@ -45,10 +45,10 @@ export const projectsEn = [
     stack: ["React", "Redux", "Node/Express", "PosgreSQL"],
     collaborators: "Solo project",
     description:
-      "Videogames App that shows videogames from Rawg.io API. Able to filter, order, create and seach games.",
+      "Videogames App that shows videogames from Rawg.io API. Able to filter, order, create and seach games. Backend in Render, please allow a few minutes to load",
     repoFront: "https://github.com/adibzr/videogames-front",
     repoBack: "https://github.com/adibzr/videogames-back",
-    site: "https://videogames-adib-raed.up.railway.app/home",
+    site: "https://videogame-static-site.onrender.com",
   },
   {
     img: barbershop,
