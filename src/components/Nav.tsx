@@ -48,7 +48,7 @@ const Nav = () => {
         {spanish ? (
           <a
             rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/1Y2M7Fmf7WV6xB3VWJIR7LVYr300nRcWs/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1Sb0O26QPfC-5WsaPGcGUCVxHRiA5xM05/view?usp=drive_link"
             target="black"
           >
             <AiFillFilePdf size={25} color="#4ade80" />
@@ -56,7 +56,7 @@ const Nav = () => {
         ) : (
           <a
             rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/1_4Np6Jg2tBebOXzpfiAOOOfLJ4GP6eIb/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1nPabCZ0Skj-dRM6Qxz5u5bWSIilKELcD/view?usp=drive_link"
             target="black"
           >
             <AiFillFilePdf size={25} color="#4ade80" />

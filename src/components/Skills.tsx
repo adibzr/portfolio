@@ -128,7 +128,7 @@ const Skills = () => {
                 : "translate-x-full opacity-0"
             }`}
           >
-            <h1 className="lg:pl-28 pl-16 lg:my-10 lg:pt-10 font-bold text-3xl">
+            <h1 className="flex justify-center font-bold text-3xl">
               Front End
             </h1>
             <div className="grid grid-cols-3 gap-8 p-16">
@@ -154,7 +154,7 @@ const Skills = () => {
                 : " translate-x-full opacity-0"
             }`}
           >
-            <h1 className="lg:pl-28 pl-16 lg:my-10 lg:pt-10 font-bold text-3xl">
+            <h1 className="flex justify-center font-bold text-3xl">
               Back End
             </h1>
             <div className="grid grid-cols-3 gap-8 p-16">

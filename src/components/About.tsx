@@ -16,34 +16,21 @@ const About = () => {
         <div
         
           id="about"
-          className="h-screen bg-green-500 relative  px-1 overflow-hidden text-[#6c6c6c]
+          className="grid items-end p-20 h-screen bg-green-500 overflow-hidden text-[#6c6c6c]
           lg:bg-background bg-cover bg-center"
         >
           <h2 className="justify-start flex flex-col items-center  pb-8 pt-[8%] font-bold text-4xl ">
             ACERCA DE MI
           </h2>
-          <div className=" m-4 text-sm h-full justify-items-center ">
+          <div className=" m-4 text-lg leading-8 h-full justify-items-center ">
               <div>
-                <p className="my-6">
-                  Comencé mis estudios de ingeniería de software en la
-                  Universidad de Buenos Aires, continué en UADE por un par de
-                  años y terminé estudios como desarrollador web Fullstack en
-                  Henry bootcamp. <br />A través de mis estudios aprendí los
-                  conceptos básicos del software que me dieron una comprensión
-                  más profunda de la programación.
-                  <br /> En Henry bootcamp pude desarrolar mis habilidad de
-                  programador y mis habilidades de trabajo en equipo a travez de
-                  dos proyectos (Videojuegos y barberia).
-                  <br />
-                  Finalmente encontré mi vocación en la programación. <br />
-                  Estoy muy emocionado de comenzar este nuevo capítulo en mi
-                  vida donde puedo, finalmente, hacer lo que he amado durante
-                  tantos años.
+                <p className="m-6">
+                  Comencé a programar cuando era pequeño, haciendo pequeños cambios en juegos que me gustaban. Después de la escuela secundaria, me inscribí en ciencias de la computación. Después de unos años, me di cuenta de que no estaba haciendo lo que me gustaba. Eventualmente, comencé un bootcamp de un año donde finalmente pude encontrar mi vocación en el desarrollo web. Ahora estoy súper emocionado de empezar a trabajar en tecnología.
                 </p>
                 <a
-                  href="https://drive.google.com/file/d/1oe5sDaUGdoDZQc1DHEK5fBW9Ef5_fI-_/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1Sb0O26QPfC-5WsaPGcGUCVxHRiA5xM05/view?usp=drive_link"
                   target={"_blank"}
-                  className=" md:inline-block md:text-[inherit] text-green-500 bg-white md:bg-transparent flex justify-center font-bold px-12 cursor-pointer p-2 border-2 border-white-500 hover:shadow-[inset_400px_0_0_0_rgb(255,255,255)] hover:text-green-500 "
+                  className=" md:inline-block md:text-[inherit] text-green-500 bg-white md:bg-transparent mx-8 flex justify-center font-bold px-12 cursor-pointer p-2 border-2 border-white-500 hover:shadow-[inset_400px_0_0_0_rgb(255,255,255)] hover:text-green-500 "
                 >
                   CV
                 </a>
@@ -53,39 +40,23 @@ const About = () => {
       ) : (
         <div
           id="about"
-          className="h-screen bg-green-500 relative  px-1 overflow-hidden text-[#6c6c6c]
-          lg:bg-background bg-cover bg-center
-    "
+          className="grid items-end p-20 h-screen bg-green-500 overflow-hidden text-[#6c6c6c]
+          lg:bg-background bg-cover bg-center"
         >
           <h2 className="justify-start flex flex-col items-center  pb-8 pt-[8%] font-bold text-4xl ">
             ABOUT
           </h2>
-          <div className=" m-4 text-sm h-full justify-items-center ">
+          <div className=" m-4 text-lg leading-8 h-full justify-items-center ">
               <div>
-                <p className="my-6">
-                  I began studies in software engineering in Universidad de
-                  Buenos Aires, continued in UADE for a couple of years and
-                  finished studies as Fullstack web developer in Henry bootcamp.
-                  <br />
-                  Through my studies i learned the basics of software that gave
-                  me a deeper understanding of programming.
-                  <br />
-                  In Henry bootcamp I built a web app using a videogame API
-                  where different videogames are shown and can be filtered,
-                  ordered and searched. <br />
-                  I was, also, part of a group of six that was tasked to build a
-                  barbershop website that included login, product cart with
-                  purchase system, appointments and admin management.
-                  <br />I finally found my vocation in programming. I’m very
-                  excited to begin this new chapter in my life where i can,
-                  finally, dedicate myself to doing what i love.
+                <p className="m-6">
+                I started programming when I was little, making small changes to games that I liked. After high school, I enrolled in computer science. After a few years, I realized that I wasn't doing what I liked. Eventually, I started a 1-year bootcamp where I was finally able to find my vocation in web development. Now I'm super excited to start working in technology.
                 </p>
                 <a
                   href={
-                    "https://drive.google.com/file/d/1fkuGGAtaz5i0fO6kokma0_AyOUv1Gcq-/view?usp=sharing"
+                    "https://drive.google.com/file/d/1nPabCZ0Skj-dRM6Qxz5u5bWSIilKELcD/view?usp=drive_link"
                   }
                   target={"_blank"}
-                  className="md:inline-block md:text-[inherit] text-green-500 bg-white md:bg-transparent flex justify-center font-bold px-12 cursor-pointer p-2 border-2 border-white-500 hover:shadow-[inset_400px_0_0_0_rgb(255,255,255)] hover:text-green-500"
+                  className="md:inline-block md:text-[inherit] text-green-500 bg-white md:bg-transparent mx-8 flex justify-center font-bold px-12 cursor-pointer p-2 border-2 border-white-500 hover:shadow-[inset_400px_0_0_0_rgb(255,255,255)] hover:text-green-500 "
                 >
                   CV
                 </a>

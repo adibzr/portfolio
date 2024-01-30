@@ -7,7 +7,7 @@ const Intro = () => {
 
 
   return (
-    <section className="flex justify-center min-h-screen h-screen items-center font-bold text-6xl ">
+    <section className="flex p-12 justify-center min-h-screen h-screen items-center font-bold text-6xl ">
         {spanish ? (
           <motion.div 
             variants={{
