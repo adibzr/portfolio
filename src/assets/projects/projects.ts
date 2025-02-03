@@ -1,5 +1,5 @@
-import videgameImg from "./images/videogame_project.png";
 import barbershop from "./images/barbershop.png";
+import chatElea from "./images/chatElea.png";
 import trackerApp from "./images/expTracker.png";
 
 export interface info {
@@ -27,6 +27,17 @@ export const projectsEs: info[] = [
     site: "https://barbershop-front-deploy.vercel.app/",
   },
   {
+    img: chatElea,
+    name: "Elea Chat",
+    stack: ["Javascript", "HTML", "SASS"],
+    collaborators: "Freelance contract",
+    description:
+      "Esqueleto para chat con funciones de IA para la compañia Estudio ThinkB",
+    repoFront: "https://github.com/adibzr/elea.git",
+    repoBack: "",
+    site: "https://adibzr.github.io/elea/",
+  },
+  {
     img: trackerApp,
     name: "Expenses Tracker",
     collaborators: "Solo project",
@@ -37,17 +48,17 @@ export const projectsEs: info[] = [
     repoBack: "",
     site: "https://expences-tracker-csod.onrender.com/",
   },
-  {
-    img: videgameImg,
-    name: "Video Games page",
-    stack: ["Javascript", "React", "Redux", "Node/Express", "PosgreSQL"],
-    collaborators: "Solo project",
-    description:
-      "App de videojuegos que incluye filtrados, ordenamiento, creación  y búsqueda. Usa como fuente la API de Rawg.io.",
-    repoFront: "https://github.com/adibzr/videogames-front",
-    repoBack: "https://github.com/adibzr/videogames-back",
-    site: "https://videogame-static-site.onrender.com",
-  },
+  // {
+  //   img: videgameImg,
+  //   name: "Video Games page",
+  //   stack: ["Javascript", "React", "Redux", "Node/Express", "PosgreSQL"],
+  //   collaborators: "Solo project",
+  //   description:
+  //     "App de videojuegos que incluye filtrados, ordenamiento, creación  y búsqueda. Usa como fuente la API de Rawg.io.",
+  //   repoFront: "https://github.com/adibzr/videogames-front",
+  //   repoBack: "https://github.com/adibzr/videogames-back",
+  //   site: "https://videogame-static-site.onrender.com",
+  // },
 ];
 
 export const projectsEn = [
@@ -64,6 +75,16 @@ export const projectsEn = [
     site: "https://barbershop-front-deploy.vercel.app/",
   },
   {
+    img: chatElea,
+    name: "Elea Chat",
+    stack: ["Javascript", "HTML", "SASS"],
+    collaborators: "Freelance contract",
+    description: "Base for AI-powered chat for the company Estudio ThinkB",
+    repoFront: "https://github.com/adibzr/elea.git",
+    repoBack: "",
+    site: "https://adibzr.github.io/elea/",
+  },
+  {
     img: trackerApp,
     name: "Expenses Tracker",
     collaborators: "Solo project",
@@ -74,15 +95,15 @@ export const projectsEn = [
     repoBack: "",
     site: "https://expences-tracker-csod.onrender.com/",
   },
-  {
-    img: videgameImg,
-    name: "Video Games page",
-    stack: ["Javascript", "React", "Redux", "Node/Express", "PosgreSQL"],
-    collaborators: "Solo project",
-    description:
-      "Videogames App that shows videogames from Rawg.io API. Able to filter, order, create and seach games. Backend in Render, please allow a few minutes to load",
-    repoFront: "https://github.com/adibzr/videogames-front",
-    repoBack: "https://github.com/adibzr/videogames-back",
-    site: "https://videogame-static-site.onrender.com",
-  },
+  // {
+  //   img: videgameImg,
+  //   name: "Video Games page",
+  //   stack: ["Javascript", "React", "Redux", "Node/Express", "PosgreSQL"],
+  //   collaborators: "Solo project",
+  //   description:
+  //     "Videogames App that shows videogames from Rawg.io API. Able to filter, order, create and seach games. Backend in Render, please allow a few minutes to load",
+  //   repoFront: "https://github.com/adibzr/videogames-front",
+  //   repoBack: "https://github.com/adibzr/videogames-back",
+  //   site: "https://videogame-static-site.onrender.com",
+  // },
 ];
